@@ -19,10 +19,19 @@
       src="https://peoplenotplatforms.com/person/5eef2e0fa1f40f00213627d9/view"
       title="Daniel Metcalfe"
     ></iframe>
-    <p>I'm a software developer from the UK with 7+ years experience.</p>
+    <p>I'm a software developer from the UK with <span id="software-developer-years-experience"></span>+ years experience.</p>
     <h2>Interested in hiring me?</h2>
     <p>If so I'd recommend checking out my StackOverflow developer story and my GitHub profile using the links on my contact card above 👆</p>
-    <p>If you prefer a traditional CV you can request access via email (see links above) or <a href="https://docs.google.com/document/d/1gfxmzHkpi4kuNFprETSqC7IicMaEUjeOM3IEU_CmTWc/edit?usp=sharing">directly on Google Drive</a> (you'll need a Google account for this).</p>
+    <p>If you prefer a traditional CV you can request access via email (see links above) or <a href="https://docs.google.com/document/d/12YL7BRPAXraxAngWGTew9lis_J-9rquZ1ke7Zft0h6M/edit?usp=sharing">directly on Google Drive</a> (you'll need a Google account for this).</p>
     <p><em>Trivia: One of my creations is People Not Platforms, the app used to create the contact card on this page! You can see the code on my GitHub profile.</em></p>
   </body>
+  <script>
+    document.getElementById('software-developer-years-experience').textContent = nYearsAgo('2013-09-01')
+
+    function nYearsAgo (date) {
+      const dateDeltaMilliseconds = new Date() - new Date(date)
+      const dateDeltaYears = dateDeltaMilliseconds / 1000 / 60 / 60 / 24 / 365
+      return Math.floor(dateDeltaYears)
+    }
+  </script>
 </html>
